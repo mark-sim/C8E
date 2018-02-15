@@ -69,7 +69,7 @@ bool c8::load(const char *filepath) {
 
     printf("Loading ROM: %s...\n", filepath);
     FILE *file = fopen(filepath, "rb"); /* open ROM binary file */
-    if(file == NULL) {
+    if(file == nullptr) {
         std::cerr << "There is no such file..." << std::endl;
         return false;
     }
@@ -79,9 +79,34 @@ bool c8::load(const char *filepath) {
     rewind(file); /* set indicator back to beginning of file */
     printf("Filesize: %d bytes \n", numBytes);
 
+    char *rom = (char *) malloc(sizeof(char) * numBytes);
+    if(rom == nullptr) {
+        std::cerr << "There is not enough memory to allocate ROM..." << std::endl;
+        return false;
+    }
+
+    size_t bytesRead = fread((void *) rom, sizeof(char), numBytes, file);
+    if(bytesRead != numBytes * sizeof(char)) {
+        std::cerr << "Was unable to read all the binary from ROM..." << std::endl;
+        return false;
+    }
 
 
+    /* 4096 memory size, 512 chip-8 interpreter, 256 display refresh, 96 for call stack */
+    if((4096 - 512 - 256 - 96 ) >= bytesRead) {
+        for (int i = 0; i < numBytes; i++) {
+            memory[i + 512] = rom[i];   /* set memory starting from 512 (incrementing by 1) to ROM binary
+ *                                     note that we're copying 1 byte at a time */
+        }
+    } else {
+        std::cerr << "The size of ROM is too big to fit into 4MB memory..." << std::endl;
+        return false;
+    }
 
+    free(rom); /* free binary rom allocated */
+    fclose(file); /* close file */
+
+    return true;
 }
 
 void c8::emulateCycle() {

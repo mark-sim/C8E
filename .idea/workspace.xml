@@ -12,15 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41b1b37a-d496-4729-ad2d-76827c97bafd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/C8E.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/C8E.cbp" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/DependInfo.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/build.make" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/cmake_clean.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/link.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change beforePath="$PROJECT_DIR$/src/c8.cpp" afterPath="$PROJECT_DIR$/src/c8.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/c8.h" afterPath="$PROJECT_DIR$/src/c8.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +38,8 @@
       <file leaf-file-name="c8.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/c8.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+            <state relative-caret-position="1620">
+              <caret line="108" column="16" lean-forward="false" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -182,12 +174,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518651009002</updated>
-      <workItem from="1518651010806" duration="6285000" />
+      <workItem from="1518651010806" duration="7502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6285000" />
+    <option name="totallyTimeSpent" value="7502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="50" width="1260" height="690" extended-state="0" />
@@ -265,8 +257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/c8.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+        <state relative-caret-position="1620">
+          <caret line="108" column="16" lean-forward="false" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
