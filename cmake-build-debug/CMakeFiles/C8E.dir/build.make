@@ -57,64 +57,64 @@ include CMakeFiles/C8E.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C8E.dir/flags.make
 
-CMakeFiles/C8E.dir/main.cpp.o: CMakeFiles/C8E.dir/flags.make
-CMakeFiles/C8E.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C8E.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C8E.dir/main.cpp.o -c /Users/marksim/CLionProjects/C8E/main.cpp
+CMakeFiles/C8E.dir/src/main.cpp.o: CMakeFiles/C8E.dir/flags.make
+CMakeFiles/C8E.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C8E.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C8E.dir/src/main.cpp.o -c /Users/marksim/CLionProjects/C8E/src/main.cpp
 
-CMakeFiles/C8E.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C8E.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marksim/CLionProjects/C8E/main.cpp > CMakeFiles/C8E.dir/main.cpp.i
+CMakeFiles/C8E.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C8E.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marksim/CLionProjects/C8E/src/main.cpp > CMakeFiles/C8E.dir/src/main.cpp.i
 
-CMakeFiles/C8E.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C8E.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marksim/CLionProjects/C8E/main.cpp -o CMakeFiles/C8E.dir/main.cpp.s
+CMakeFiles/C8E.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C8E.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marksim/CLionProjects/C8E/src/main.cpp -o CMakeFiles/C8E.dir/src/main.cpp.s
 
-CMakeFiles/C8E.dir/main.cpp.o.requires:
+CMakeFiles/C8E.dir/src/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/C8E.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/C8E.dir/src/main.cpp.o.requires
 
-CMakeFiles/C8E.dir/main.cpp.o.provides: CMakeFiles/C8E.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/C8E.dir/build.make CMakeFiles/C8E.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/C8E.dir/main.cpp.o.provides
+CMakeFiles/C8E.dir/src/main.cpp.o.provides: CMakeFiles/C8E.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/C8E.dir/build.make CMakeFiles/C8E.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/C8E.dir/src/main.cpp.o.provides
 
-CMakeFiles/C8E.dir/main.cpp.o.provides.build: CMakeFiles/C8E.dir/main.cpp.o
+CMakeFiles/C8E.dir/src/main.cpp.o.provides.build: CMakeFiles/C8E.dir/src/main.cpp.o
 
 
-CMakeFiles/C8E.dir/c8.cpp.o: CMakeFiles/C8E.dir/flags.make
-CMakeFiles/C8E.dir/c8.cpp.o: ../c8.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C8E.dir/c8.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C8E.dir/c8.cpp.o -c /Users/marksim/CLionProjects/C8E/c8.cpp
+CMakeFiles/C8E.dir/src/c8.cpp.o: CMakeFiles/C8E.dir/flags.make
+CMakeFiles/C8E.dir/src/c8.cpp.o: ../src/c8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C8E.dir/src/c8.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C8E.dir/src/c8.cpp.o -c /Users/marksim/CLionProjects/C8E/src/c8.cpp
 
-CMakeFiles/C8E.dir/c8.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C8E.dir/c8.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marksim/CLionProjects/C8E/c8.cpp > CMakeFiles/C8E.dir/c8.cpp.i
+CMakeFiles/C8E.dir/src/c8.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C8E.dir/src/c8.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marksim/CLionProjects/C8E/src/c8.cpp > CMakeFiles/C8E.dir/src/c8.cpp.i
 
-CMakeFiles/C8E.dir/c8.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C8E.dir/c8.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marksim/CLionProjects/C8E/c8.cpp -o CMakeFiles/C8E.dir/c8.cpp.s
+CMakeFiles/C8E.dir/src/c8.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C8E.dir/src/c8.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marksim/CLionProjects/C8E/src/c8.cpp -o CMakeFiles/C8E.dir/src/c8.cpp.s
 
-CMakeFiles/C8E.dir/c8.cpp.o.requires:
+CMakeFiles/C8E.dir/src/c8.cpp.o.requires:
 
-.PHONY : CMakeFiles/C8E.dir/c8.cpp.o.requires
+.PHONY : CMakeFiles/C8E.dir/src/c8.cpp.o.requires
 
-CMakeFiles/C8E.dir/c8.cpp.o.provides: CMakeFiles/C8E.dir/c8.cpp.o.requires
-	$(MAKE) -f CMakeFiles/C8E.dir/build.make CMakeFiles/C8E.dir/c8.cpp.o.provides.build
-.PHONY : CMakeFiles/C8E.dir/c8.cpp.o.provides
+CMakeFiles/C8E.dir/src/c8.cpp.o.provides: CMakeFiles/C8E.dir/src/c8.cpp.o.requires
+	$(MAKE) -f CMakeFiles/C8E.dir/build.make CMakeFiles/C8E.dir/src/c8.cpp.o.provides.build
+.PHONY : CMakeFiles/C8E.dir/src/c8.cpp.o.provides
 
-CMakeFiles/C8E.dir/c8.cpp.o.provides.build: CMakeFiles/C8E.dir/c8.cpp.o
+CMakeFiles/C8E.dir/src/c8.cpp.o.provides.build: CMakeFiles/C8E.dir/src/c8.cpp.o
 
 
 # Object files for target C8E
 C8E_OBJECTS = \
-"CMakeFiles/C8E.dir/main.cpp.o" \
-"CMakeFiles/C8E.dir/c8.cpp.o"
+"CMakeFiles/C8E.dir/src/main.cpp.o" \
+"CMakeFiles/C8E.dir/src/c8.cpp.o"
 
 # External object files for target C8E
 C8E_EXTERNAL_OBJECTS =
 
-C8E: CMakeFiles/C8E.dir/main.cpp.o
-C8E: CMakeFiles/C8E.dir/c8.cpp.o
+C8E: CMakeFiles/C8E.dir/src/main.cpp.o
+C8E: CMakeFiles/C8E.dir/src/c8.cpp.o
 C8E: CMakeFiles/C8E.dir/build.make
 C8E: CMakeFiles/C8E.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable C8E"
@@ -125,8 +125,8 @@ CMakeFiles/C8E.dir/build: C8E
 
 .PHONY : CMakeFiles/C8E.dir/build
 
-CMakeFiles/C8E.dir/requires: CMakeFiles/C8E.dir/main.cpp.o.requires
-CMakeFiles/C8E.dir/requires: CMakeFiles/C8E.dir/c8.cpp.o.requires
+CMakeFiles/C8E.dir/requires: CMakeFiles/C8E.dir/src/main.cpp.o.requires
+CMakeFiles/C8E.dir/requires: CMakeFiles/C8E.dir/src/c8.cpp.o.requires
 
 .PHONY : CMakeFiles/C8E.dir/requires
 

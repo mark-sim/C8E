@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/marksim/CLionProjects/C8E/c8.cpp" "/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles/C8E.dir/c8.cpp.o"
-  "/Users/marksim/CLionProjects/C8E/main.cpp" "/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles/C8E.dir/main.cpp.o"
+  "/Users/marksim/CLionProjects/C8E/src/c8.cpp" "/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles/C8E.dir/src/c8.cpp.o"
+  "/Users/marksim/CLionProjects/C8E/src/main.cpp" "/Users/marksim/CLionProjects/C8E/cmake-build-debug/CMakeFiles/C8E.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

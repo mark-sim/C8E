@@ -1,12 +1,10 @@
 #ifndef C8E_C8_H
 #define C8E_C8_H
 
-
 class c8 {
     private:
-
     unsigned short opcode;  /* This is 16 bits (2 bytes) opcode */
-    unsigned char memory[4096]; /* This is the amount of memory for chip8 */
+    unsigned char memory[4096]; /* This is the amount of memory for chip-8 */
     unsigned char V[16];  /* 16 registers each 8 bits (1byte). V0 - VE and VF(carry flag) */
 
     /* There are two special registers, PC and I which are both 16 bits (2 bytes) */
@@ -30,8 +28,12 @@ class c8 {
 
     public:
 
+    c8();   /* constructor for chip-8 */
+    ~c8();  /* destructor for chip-8 */
+
     void initialize(); /* initialize registers and memory */
-    void emulateCycle(); /* emulates fetch-execute cycle of chips-8 */
+    void emulateCycle(); /* emulates fetch-execute cycle of chip-8 */
+    bool load(const char *filepath); /* loads the ROM binary to memory */
 
 };
 

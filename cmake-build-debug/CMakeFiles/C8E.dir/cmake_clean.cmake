@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/C8E.dir/main.cpp.o"
-  "CMakeFiles/C8E.dir/c8.cpp.o"
+  "CMakeFiles/C8E.dir/src/main.cpp.o"
+  "CMakeFiles/C8E.dir/src/c8.cpp.o"
   "C8E.pdb"
   "C8E"
 )

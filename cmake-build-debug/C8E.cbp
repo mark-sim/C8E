@@ -80,13 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/marksim/CLionProjects/C8E/c8.cpp">
+		<Unit filename="/Users/marksim/CLionProjects/C8E/src/c8.cpp">
 			<Option target="C8E"/>
 		</Unit>
-		<Unit filename="/Users/marksim/CLionProjects/C8E/c8.h">
+		<Unit filename="/Users/marksim/CLionProjects/C8E/src/c8.h">
 			<Option target="C8E"/>
 		</Unit>
-		<Unit filename="/Users/marksim/CLionProjects/C8E/main.cpp">
+		<Unit filename="/Users/marksim/CLionProjects/C8E/src/main.cpp">
 			<Option target="C8E"/>
 		</Unit>
 		<Unit filename="/Users/marksim/CLionProjects/C8E/CMakeLists.txt">
