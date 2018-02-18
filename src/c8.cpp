@@ -113,8 +113,14 @@ void c8::emulateCycle() {
     /* First we fetch the opcode which is in memory */
     opcode = (memory[pc] << 8) | (memory[pc+1]);
 
+    /* We fetch the opcode
+       We first look at first 4 bits */
+    switch(opcode & 0xF000) {
+        default:
+            /* print opcode in hexadecimal */
+            printf("Unknown opcode: 0x%X\n", opcode);
+    }
 
-    pc += 2;
 
 
 }
