@@ -3,6 +3,7 @@
 
 class c8 {
     private:
+    bool drawFlag;          /* drawFlag is On/True when we need an update for display. Off/False otherwise */
     unsigned short opcode;  /* This is 16 bits (2 bytes) opcode */
     unsigned char memory[4096]; /* This is the amount of memory for chip-8 */
     unsigned char V[16];  /* 16 registers each 8 bits (1byte). V0 - VE and VF(carry flag) */
@@ -34,6 +35,7 @@ class c8 {
     void initialize(); /* initialize registers and memory */
     void emulateCycle(); /* emulates fetch-execute cycle of chip-8 */
     bool load(const char *filepath); /* loads the ROM binary to memory */
+    bool getDrawFlag(); /* returns the state of drawFlag */
 
 };
 

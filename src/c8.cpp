@@ -116,9 +116,37 @@ void c8::emulateCycle() {
     /* We decode the opcode here
        We first look at first 4 bits */
     switch(opcode & 0xF000) {
-        case:
+
+        case 0x0000:    /* if the first 4 bits is 0 */
+            switch(opcode & 0x000F) {   /* look at the last 4 bits */
+                case 0x0000:        /* 0X00E0: clears the screen */
+                    for(int i=0; i<2048; i++) {
+                        gfx[i] = 0;
+                    }
+                    drawFlag = true;
+                    pc += 2;
+                break;
+
+                case 0x000E:        /* 0X00EE: return from subroutine */
+                    pc = stack[--sp];
+                    pc += 2;
+                break;
+
+                default:
+                    printf("Unknown opcode 0x%X\n", opcode);
+            }
+        break;
+
+        case 0x1000:    /* if the first 4 bits is 1, 0x1NNN: Jumps to address NNN */
+            pc = opcode & 0x0FFF;
+        break;
+
+        case 0x2000:    /* if the first 4 bits is 2, 0x2NNN: Calls subroutine at NNN */
+            stack[sp++] = pc;
+            pc = opcode & 0X0FFF;
+        break;
             
-            break;
+
         default:
             /* print opcode in hexadecimal */
             printf("Unknown opcode: 0x%X\n", opcode);
