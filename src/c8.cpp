@@ -145,8 +145,42 @@ void c8::emulateCycle() {
             stack[sp++] = pc;
             pc = opcode & 0X0FFF;
         break;
-            
 
+        case 0x3000:    /* if the first 4 bits is 3, 0x3XNN: skips next instr if VX = NN */
+            if(V[(opcode & 0x0F00) >> 8] == opcode & 0x00FF) {
+                pc += 4;    /* if true skip next instr */
+            } else {
+                pc += 2;    /* otherwise, go to next instr */
+            }
+        break;
+
+        case 0x4000:    /* if the first 4 bits is 4, 0x4XNN: skips next instr if VX != NN */
+            if(V[(opcode & 0x0F00) >> 8] != opcode & 0x00FF) {
+                pc += 4;    /* if true skip next instr */
+            } else {
+                pc += 2;    /* otherwise, go to next instr */
+            }
+        break;
+
+        case 0x5000:    /* if the first 4 bits is 5, 0x5XY0: skips next instr if VX == VY */
+            if(V[(opcode & 0x0F00) >> 8] == V[(opcode & 0x00F0) >> 4]) {
+                pc += 4;    /* if true skip next instr */
+            } else {
+                pc += 2;    /* otherwise, go to next instr */
+            }
+        break;
+
+        case 0x6000:    /* if the first 4 bits is 6, 0x6XNN: sets VX to NN */
+            V[(opcode & 0x0F00) >> 8] = (opcode & 0x00FF);
+            pc += 2;
+        break;
+
+        case 0x7000:    /* if the first 4 bits is 7, 0x7XNN: Adds NN to VX */
+            V[(opcode & 0x0F00) >> 8] += (opcode & 0x00FF);
+            pc += 2;
+        break;
+
+            
         default:
             /* print opcode in hexadecimal */
             printf("Unknown opcode: 0x%X\n", opcode);
