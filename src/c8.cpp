@@ -203,14 +203,107 @@ void c8::emulateCycle() {
                     pc += 2;
                 break;
 
-                case 0x0004:    /* 0x8XY4: Adds VX = VX + VY. VF set to 1 when there's a carry. 0 Otherwise */
-                    V[(opcode & 0x0F00) >> 8] += V[(opcode & 0x00F0) >> 4];    
+                case 0x0004:    /* 0x8XY4: VX = VX + VY. VF set to 1 when there's a carry. 0 Otherwise */
+                    if(V[(opcode & 0x0F00) >> 8] > (0xFF - V[(opcode & 0x00F0) >> 4])) {     /* VX > 255 - VY */
+                        V[0xF] = 1; /* carry flag, aka: the 9th bit */
+                    } else {
+                        V[0xF] = 0;
+                    }
+                    V[(opcode & 0x0F00) >> 8] += V[(opcode & 0x00F0) >> 4];
+                    pc += 2;
                 break;
+
+                case 0x0005:    /* 0x8XY5: VX = VX - VY. VF set to 0 when there's a borrow. 1 Otherwise */
+                    if (V[(opcode & 0x00F0) >> 4] > V[(opcode & 0x0F00) >> 8]) {        /* VY > VX */
+                        V[0xF] = 0;
+                    } else {
+                        V[0xF] = 1;
+                    }
+                    V[(opcode & 0x0F00) >> 8] -= V[(opcode & 0x00F0) >> 4];
+                    pc += 2;
+                break;
+
+                case 0x0006:    /* 0x8XY6: Set VX to VX shift right by 1.
+ *                                 VF set to least sig bit of VX before the shift */
+                    V[0xF] = V[(opcode & 0x0F00) >> 8] & 0x1;   /* this is 0 or 1 */
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x0F00) >> 8] >> 1;
+                    pc += 2;
+                break;
+
+                case 0x0007:    /* 0x8XY7: VX = VY - VX. VF set to 0 when there's a borrow. 1 otherwise. */
+                    if (V[(opcode & 0x0F00) >> 8] > V[(opcode & 0x00F0) >> 4]) {        /* VY > VX */
+                        V[0xF] = 0;
+                    } else {
+                        V[0xF] = 1;
+                    }
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x00F0) >> 4] - V[(opcode & 0x0F00) >> 8];
+                    pc += 2;
+                break;
+
+                case 0x000E:    /* 0x8XYE: Set VX to VX shift left by 1.
+ *                                         VF is set to the most sig bit of VX before the shift */
+                    V[0xF] = V[(opcode & 0x0F00) >> 8] >> 7;
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x0F00) >> 8] << 1;
+                    pc += 2;
+                break;
+
                 default:
                     /* print opcode in hexadecimal */
                     printf("Unknown opcode: 0x%X\n", opcode);
             }
         break;
+
+        case 0x9000:    /* if the first 4 bits is 9, 9XY0: skip next instr if VX != VY. */
+            if(V[(opcode & 0x0F00) >> 8] !=  V[(opcode & 0x00F0) >> 4]) {
+                pc += 4;
+            } else {
+                pc += 2;
+            }
+        break;
+
+        case 0xA000:    /* if the first 4 bits is A, 0xANNN: set I=NNN */
+            I = opcode & 0x0FFF;    /* the bit operation results in 12 bits */
+            pc += 2;
+        break;
+
+        case 0xB000:    /* if the first 4 bits is B, 0xBNNN: set PC = V0 + NNN */
+            pc = V[0] + (opcode & 0x0FFF);  /* 8 bits addition with 12 bits fit into 16 bits */
+        break;
+
+        case 0xC000:    /* if the first 4 bits is C, 0xCXNN: set VX = rand() & NN. rand() should be 0-255 (8bits). */
+            V[(opcode & 0x0F00) >> 8] = (rand() % 256) & (opcode & 0x00FF); /* 0-255 is 8 bits AND with 8 bits */
+            pc += 2;
+        break;
+
+        case 0xD000:    /* if the first 4 bits is D, 0xDXYN: draw a sprite at (VX,VY).
+                           Should be 8 pixels wide and N pixels high.
+                           I should be pointing to the base sprite address we want to draw */
+            unsigned short x = V[(opcode & 0x0F00) >> 8];   /* TODO: maybe try using unsigned char for all? */
+            unsigned short y = V[(opcode & 0x00F0) >> 4];
+            unsigned short height = opcode & 0x000F;
+            unsigned short pixel;
+
+            V[0xF] = 0;
+            for(int i=0; i<height; i++) {
+                pixel = memory[I + i];
+                for(int j=0; j<8; j++) {
+                    if((pixel & (0x80 >> j)) != 0) {    /* if sprite pixel bit we want to draw is 1 */
+                        if(gfx[x + j + ((y + i) * 64)] == 1) {   /* AND the pixel bit at the screen is 1 */
+                            V[0xF] = 1;
+                        }
+                        gfx[x + j + ((y + i) * 64)] = gfx[x + j + ((y + i) * 64)] ^ 1;
+                    }
+                }
+            }
+            drawFlag = true;
+            pc += 2;
+        break;
+
+        case 0xE000:    /* if the first 4 bits is E, need to check last 4 or 8 bits */
+
+
+        break;
+
         default:
             /* print opcode in hexadecimal */
             printf("Unknown opcode: 0x%X\n", opcode);
