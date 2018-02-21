@@ -133,6 +133,7 @@ void c8::emulateCycle() {
                 break;
 
                 default:
+                    /* print opcode in hexadecimal */
                     printf("Unknown opcode 0x%X\n", opcode);
             }
         break;
@@ -180,7 +181,36 @@ void c8::emulateCycle() {
             pc += 2;
         break;
 
-            
+        case 0x8000:    /* if the first 4 bits is 8, we have to see the last 4 bits */
+            switch(opcode & 0x000F) {
+                case 0x0000:    /* 0x8XY0: sets VX to the value of VY */
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x00F0) >> 4];
+                    pc += 2;
+                break;
+
+                case 0x0001:    /* 0x8XY1: sets VX to (VX or VY) */
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x0F00) >> 8] | V[(opcode & 0x00F0) >> 4];
+                    pc += 2;
+                break;
+
+                case 0x0002:    /* 0x8XY2: sets VX to (VX and VY) */
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x0F00) >> 8] & V[(opcode & 0x00F0) >> 4];
+                    pc += 2;
+                break;
+
+                case 0x0003:    /* 0x8XY3: sets VX to (VX xor VY) */
+                    V[(opcode & 0x0F00) >> 8] = V[(opcode & 0x0F00) >> 8] ^ V[(opcode & 0x00F0) >> 4];
+                    pc += 2;
+                break;
+
+                case 0x0004:    /* 0x8XY4: Adds VX = VX + VY. VF set to 1 when there's a carry. 0 Otherwise */
+                    V[(opcode & 0x0F00) >> 8] += V[(opcode & 0x00F0) >> 4];    
+                break;
+                default:
+                    /* print opcode in hexadecimal */
+                    printf("Unknown opcode: 0x%X\n", opcode);
+            }
+        break;
         default:
             /* print opcode in hexadecimal */
             printf("Unknown opcode: 0x%X\n", opcode);
