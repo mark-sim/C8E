@@ -24,8 +24,13 @@ class c8 {
     unsigned short sp;
 
     /* We also need a hex keyboard input */
-
+    /* Keyboard will look the following:
+     * 1    2   3   4
+     * Q    W   E   R
+     * A    S   D   F
+     * Z    X   C   V                   */
     unsigned char key[16];
+
 
     public:
 
