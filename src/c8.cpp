@@ -302,16 +302,27 @@ void c8::emulateCycle() {
         case 0xE000:    /* if the first 4 bits is E, need to check last 4 or 8 bits */
             switch(opcode & 0x00FF) {
                 case 0x009E:    /* if the last 8 bits is 9E, 0xEX9E: skip next instr if key in VX is pressed */
-
-                break;
+                    if (key[V[(opcode & 0x0F00) >> 8]] != 0) {
+                        pc += 4;
+                    } else {
+                        pc += 2;
+                    }
+                    break;
 
                 case 0x00A1:    /* if the last 8 bits is A1, 0xEXA1: skip next instr if key in VX isn't pressed */
+                    if (key[V[(opcode & 0x0F00) >> 8]] == 0) {
+                        pc += 4;
+                    } else {
+                        pc += 2;
+                    }
+                    break;
 
-                break;
+                default:
+                    printf("Unknown opcode: 0x%X\n", opcode);
             }
-
-
         break;
+
+            
 
         default:
             /* print opcode in hexadecimal */
