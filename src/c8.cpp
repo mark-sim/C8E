@@ -349,6 +349,89 @@ void c8::emulateCycle() {
             break;
         }
 
+        case 0xF000: {  /* if the first 4 bits is F look at the last 8 bits */
+            switch(opcode & 0x00FF) {
+                case 0x0007: {  /* 0xFX07: sets VX to the value of delay timer */
+                    V[(opcode & 0x0F00) >> 8] = delayTimer;
+                    pc += 2;
+                    break;
+                }
+
+                case 0x000A: { /* 0xFX0A: A key press is awaited, then stored in VX */
+                    bool keyPress = false;
+                    for(int i=0; i<16; i++) {
+                        if(key[i] != 0) {
+                            V[(opcode & 0x0F00) >> 8] = i;
+                            keyPress = true;
+                        }
+                    }
+
+                    if(!keyPress) {
+                        return;
+                    }
+                    pc += 2;
+                    break;
+                }
+
+                case 0x0015: { /* 0xFX15: Sets the delay timer to VX */
+                    delayTimer = V[(opcode & 0x0F00) >> 8];
+                    pc += 2;
+                    break;
+                }
+
+                case 0x0018: { /* 0xFX18: Sets the sound timer to VX */
+                    soundTimer = V[(opcode & 0x0F00) >> 8];
+                    pc += 2;
+                    break;
+                }
+
+                case 0x001E: { /* 0xFX1E: Adds VX to I */
+                    if(I + (V[opcode & 0x0F00] >> 8) > 0xFFFF) {
+                        V[0xF] = 1;
+                    } else {
+                        V[0xF] = 0;
+                    }
+                    I += V[(opcode & 0x0F00) >> 8];
+                    pc += 2;
+                    break;
+                }
+
+                case 0x0029: {  /* 0xFX29: Sets I to the location
+                                   of the sprite for the character in VX.
+                                   Characters 0-F (in hexadecimal) are represented by a 4x5 font */
+                    I = 5 * V[(opcode & 0x0F00) >> 8];
+                    pc += 2;
+                    break;
+                }
+
+                case 0x0033: {  /* 0xFX33 */
+                    memory[I] = V[(opcode & 0x0F00) >> 8] / 100;
+                    memory[I+1] = (V[(opcode & 0x0F00) >> 8] / 10) % 10;
+                    memory[I+2] = V[(opcode & 0x0F00) >> 8] % 10;
+                    pc += 2;
+                    break;
+                }
+
+                case 0x0055: { /* 0xFX55: reg_dump to mem */
+                    for(int i=0; i<= ((opcode & 0x0F00) >> 8); i++) {
+                        memory[I + i] = V[i];
+                    }
+                    I += ((opcode & 0x0F00) >> 8) + 1;
+                    pc += 2;
+                    break;
+                }
+
+                case 0x0065: { /* 0xFX65: reg_load from mem */
+                    for (int i = 0; i <= ((opcode & 0x0F00) >> 8); i++) {
+                        V[i] = memory[I + i];
+                    }
+                    I += ((opcode & 0x0F00) >> 8) + 1;
+                    pc += 2;
+                    break;
+                }
+            }
+        }
+
 
 
         default:
