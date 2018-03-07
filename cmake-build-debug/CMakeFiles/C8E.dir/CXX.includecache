@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/marksim/CLionProjects/C8E/src/c8.cpp
+time.h
+-
+random
+-
+iostream
+-
+c8.h
+/Users/marksim/CLionProjects/C8E/src/c8.h
+
+/Users/marksim/CLionProjects/C8E/src/c8.h
+
+/Users/marksim/CLionProjects/C8E/src/main.cpp
+iostream
+-
+c8.h
+/Users/marksim/CLionProjects/C8E/src/c8.h
+
