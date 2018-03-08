@@ -21,6 +21,14 @@ c8.h
 /Users/marksim/CLionProjects/C8E/src/main.cpp
 iostream
 -
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+OpenGL/glext.h
+-
+GLUT/glut.h
+-
 c8.h
 /Users/marksim/CLionProjects/C8E/src/c8.h
 

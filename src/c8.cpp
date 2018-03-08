@@ -399,7 +399,7 @@ void c8::emulateCycle() {
                 case 0x0029: {  /* 0xFX29: Sets I to the location
                                    of the sprite for the character in VX.
                                    Characters 0-F (in hexadecimal) are represented by a 4x5 font */
-                    I = 5 * V[(opcode & 0x0F00) >> 8];
+                    I = 0x5 * V[(opcode & 0x0F00) >> 8];
                     pc += 2;
                     break;
                 }
@@ -430,13 +430,24 @@ void c8::emulateCycle() {
                     break;
                 }
             }
+            break;
         }
-
-
 
         default:
             /* print opcode in hexadecimal */
             printf("Unknown opcode: 0x%X\n", opcode);
+    }
+
+    /* update timers */
+    if(delayTimer > 0) {
+        delayTimer--;
+    }
+
+    if(soundTimer > 0) {
+        if(soundTimer == 1) {
+            printf("BEEP");
+        }
+        soundTimer--;
     }
 
 
