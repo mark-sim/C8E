@@ -47,7 +47,7 @@ To be honest, I don't know the keys for each game either.
 Play around with it, it won't be too hard to figure it out.  
 
 This is the *famous space invaders*  
-<img src="http://gph.is/2Idckby" width="480" height="256"/>
+<img src="https://github.com/marksim5/C8E/blob/master/demo/demo.gif?raw=true" width="480" height="256"/>
 
 This project's been very fun from start to beginning.  
 Used some concepts thought in school such as instruction fetching & decoding and LOTS of research to learn the underlying hardware.  
