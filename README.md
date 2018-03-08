@@ -46,8 +46,8 @@ Z X C V
 To be honest, I don't know the keys for each game either.  
 Play around with it, it won't be too hard to figure it out.  
 
-This is the *famous space invaders*
-<iframe src="https://giphy.com/embed/9Pvl0wFGq3nVE28VSK" width="480" height="256" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/9Pvl0wFGq3nVE28VSK">via GIPHY</a></p>  
+This is the *famous space invaders* 
+![Alt Text](https://giphy.com/embed/9Pvl0wFGq3nVE28VSK)
 
 This project's been very fun from start to beginning.  
 Used some concepts thought in school such as instruction fetching & decoding and LOTS of research to learn the underlying hardware.  
