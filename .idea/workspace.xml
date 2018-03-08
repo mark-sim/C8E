@@ -13,13 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="41b1b37a-d496-4729-ad2d-76827c97bafd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/C8E" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/CXX.includecache" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/src/c8.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/src/c8.cpp.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C8E.dir/src/main.cpp.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/c8.cpp" afterPath="$PROJECT_DIR$/src/c8.cpp" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/src/c8.h" afterPath="$PROJECT_DIR$/src/c8.h" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,21 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c8.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="c8.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/c8.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="41" column="73" lean-forward="false" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
+            <state relative-caret-position="1">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="177" column="1" lean-forward="true" selection-start-line="177" selection-start-column="1" selection-end-line="177" selection-end-column="1" />
+            <state relative-caret-position="171">
+              <caret line="184" column="39" lean-forward="false" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#53#75#0" expanded="true" />
@@ -101,9 +96,9 @@
         <option value="$PROJECT_DIR$/c8.h" />
         <option value="$PROJECT_DIR$/c8.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/c8.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/c8.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/c8.h" />
       </list>
     </option>
   </component>
@@ -113,7 +108,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="738" />
@@ -199,15 +194,15 @@
       <option name="presentableId" value="Default" />
       <updated>1518651009002</updated>
       <workItem from="1518651010806" duration="10679000" />
-      <workItem from="1519019153936" duration="17825000" />
+      <workItem from="1519019153936" duration="18175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28504000" />
+    <option name="totallyTimeSpent" value="28854000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="738" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="738" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -293,6 +288,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="184" column="39" lean-forward="false" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#53#75#0" expanded="true" />
+            <element signature="e#129#232#0" expanded="true" />
+            <element signature="e#3898#3919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/c8.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1361">
@@ -305,22 +313,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/c8.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="41" column="73" lean-forward="false" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
+        <state relative-caret-position="1">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="177" column="1" lean-forward="true" selection-start-line="177" selection-start-column="1" selection-end-line="177" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#53#75#0" expanded="true" />
-            <element signature="e#129#232#0" expanded="true" />
-            <element signature="e#3898#3919#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

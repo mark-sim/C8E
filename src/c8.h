@@ -22,10 +22,10 @@ class c8 {
 
     /* We also need a hex keyboard input */
     /* Keyboard will look the following:
-     * 1    2   3   4
-     * Q    W   E   R
-     * A    S   D   F
-     * Z    X   C   V                   */
+     * 1    2   3   C
+     * 4    5   6   D
+     * 7    8   9   E
+     * A    0   B   F                   */
 
 
     public:
