@@ -445,7 +445,7 @@ void c8::emulateCycle() {
 
     if(soundTimer > 0) {
         if(soundTimer == 1) {
-            printf("BEEP");
+            /* nothing for now */
         }
         soundTimer--;
     }
