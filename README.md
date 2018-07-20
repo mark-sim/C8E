@@ -2,7 +2,7 @@
 ### CHIP-8 Emulator written in C++11
 
 
-This was my first project to get an insight of *THE SCARY EMULATOR WORLD.*  
+This was my first project to get an insight of *THE EMULATOR WORLD.*  
 
 
 All the games in ROM works!  
